@@ -139,7 +139,7 @@ function Dashboard() {
           <div className={styles.txList}>
             {transactions.length === 0 ? (
               <p style={{ color: 'var(--text-muted)', padding: '20px', textAlign: 'center' }}>
-                No transactions yet — add one from the Transactions page!
+                No transactions yet, add one from the Transactions page!
               </p>
             ) : (
               transactions.slice(0, 5).map(tx => (

@@ -18,7 +18,7 @@ function Landing() {
           </h1>
           <p className={`${styles.heroSub} fade-up fade-up-delay-2`}>
             Finora helps you track spending, set budgets, and understand
-            your finances — beautifully and effortlessly.
+            your finances beautifully and effortlessly.
           </p>
           <div className={`${styles.heroBtns} fade-up fade-up-delay-3`}>
             <Link to="/signup" className="btn-primary">Start for free</Link>
