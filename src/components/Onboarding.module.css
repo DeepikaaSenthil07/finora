@@ -1,0 +1,355 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 15, 26, 0.6);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 300;
+  padding: 20px;
+}
+
+.modal {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 40px 36px;
+  width: 100%;
+  max-width: 520px;
+  box-shadow: 0 24px 60px rgba(108,99,255,0.2);
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+/* ── Progress dots ── */
+.dots {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--border);
+  transition: all 0.3s;
+}
+
+.dotActive {
+  background: var(--primary);
+  width: 24px;
+  border-radius: 4px;
+}
+
+/* ── Step wrapper ── */
+.stepWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ── Welcome step ── */
+.welcomeEmoji {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.welcomeTitle {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  text-align: center;
+  line-height: 1.3;
+  letter-spacing: -0.5px;
+}
+
+.userName {
+  color: var(--primary);
+}
+
+.welcomeDesc {
+  color: var(--text-secondary);
+  text-align: center;
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+.stepCards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.stepCard {
+  background: var(--primary-light);
+  border-radius: var(--radius-sm);
+  padding: 14px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.stepCard span:first-child { font-size: 1.4rem; }
+
+/* ── Step title/desc ── */
+.stepTitle {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.3px;
+}
+
+.stepDesc {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+
+/* ── Budget list ── */
+.budgetList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.budgetRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 16px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-sm);
+  transition: all 0.2s;
+  background: var(--bg);
+}
+
+.budgetRowActive {
+  border-color: var(--primary);
+  background: var(--primary-light);
+}
+
+.budgetLeft {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.checkbox {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--primary);
+  cursor: pointer;
+}
+
+.budgetIcon { font-size: 1.2rem; }
+
+.budgetName {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.budgetRight {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.rupee {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.limitInput {
+  width: 90px;
+  padding: 6px 10px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 0.88rem;
+  font-family: 'Inter', sans-serif;
+  color: var(--text-primary);
+  background: var(--white);
+  outline: none;
+  text-align: right;
+}
+
+.limitInput:focus {
+  border-color: var(--primary);
+}
+
+.limitInput:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* ── Transaction form ── */
+.txForm {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.typeToggle {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.typeBtn {
+  padding: 10px;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid var(--border);
+  font-size: 0.88rem;
+  font-weight: 600;
+  background: var(--bg);
+  color: var(--text-secondary);
+  transition: all 0.2s;
+}
+
+.typeBtnActive {
+  border-color: var(--primary);
+  background: var(--primary-light);
+  color: var(--primary);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.field label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.field input,
+.field select {
+  padding: 10px 12px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  font-family: 'Inter', sans-serif;
+  color: var(--text-primary);
+  background: var(--bg);
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.field input:focus,
+.field select:focus {
+  border-color: var(--primary);
+}
+
+/* ── Tour ── */
+.tourProgress {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.tourDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--border);
+  transition: all 0.3s;
+}
+
+.tourDotActive {
+  background: var(--primary);
+  width: 24px;
+  border-radius: 4px;
+}
+
+.tourCard {
+  background: var(--primary-light);
+  border-radius: var(--radius-md);
+  padding: 28px 24px;
+  border: 1px solid rgba(108,99,255,0.2);
+}
+
+.tourTitle {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+}
+
+.tourDesc {
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.tourHighlight {
+  background: var(--white);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  font-size: 0.85rem;
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+}
+
+/* ── Buttons ── */
+.btnRow {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  margin-top: 4px;
+}
+
+.primaryBtn {
+  background: var(--primary);
+  color: var(--white);
+  padding: 12px 24px;
+  border-radius: var(--radius-full);
+  font-size: 0.92rem;
+  font-weight: 600;
+  transition: all 0.2s;
+  border: none;
+}
+
+.primaryBtn:hover:not(:disabled) {
+  background: var(--primary-dark);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.primaryBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.skipBtn {
+  background: transparent;
+  color: var(--text-secondary);
+  padding: 12px 20px;
+  border-radius: var(--radius-full);
+  font-size: 0.92rem;
+  font-weight: 500;
+  border: 1.5px solid var(--border);
+  transition: all 0.2s;
+}
+
+.skipBtn:hover {
+  background: var(--bg);
+}
+
+@media (max-width: 480px) {
+  .modal { padding: 28px 20px; }
+  .welcomeTitle { font-size: 1.5rem; }
+  .stepCards { grid-template-columns: 1fr; }
+  .btnRow { flex-direction: column; }
+  .primaryBtn, .skipBtn { width: 100%; text-align: center; }
+}
